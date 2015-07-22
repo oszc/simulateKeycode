@@ -5,26 +5,26 @@ package com.zc;
  * Created by JustinZhang.
  */
 public interface KeyCodeInterface {
-    boolean up();
-    boolean left();
-    boolean right();
-    boolean down();
-    boolean center();
-    boolean back();
-    boolean home();
-    boolean power();
-    boolean zero();
-    boolean one();
-    boolean two();
-    boolean three();
-    boolean four();
-    boolean five();
-    boolean six();
-    boolean seven();
-    boolean eight();
-    boolean nine();
-    boolean delete();
-    boolean enter();
+    String up();
+    String left();
+    String right();
+    String down();
+    String center();
+    String back();
+    String home();
+    String power();
+    String zero();
+    String one();
+    String two();
+    String three();
+    String four();
+    String five();
+    String six();
+    String seven();
+    String eight();
+    String nine();
+    String delete();
+    String enter();
 
-    boolean exec(int keycode);
+    String exec(int keycode);
 }
