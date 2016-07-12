@@ -1,21 +1,23 @@
 package com.zc;
-
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class remote extends Frame {
+/**
+ *
+ */
+public class Remote extends Frame {
 
     private static final long serialVersionUID = 22;
     GridLayout gl0, gl1, gl2;
-    Panel p0, p1, p2;
+    Panel p0, p1, p2,p3;
     Button b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, b_cancel, b_ok, b_turn_ok, b_home, b_dpad_up, b_dpad_down, b_dpad_left, b_dpad_right, b_back;
     StringBuffer str;
 
+    JComboBox comboBox;
     KeyCodeInterface keyCode = new AndroidKeyCode();
 
-    public remote() {
+    public Remote() {
         gl0 = new GridLayout(4, 5, 10, 15);
         gl1 = new GridLayout(3, 1, 0, 15);
         gl2 = new GridLayout(4, 1, 0, 15);
@@ -81,9 +83,14 @@ public class remote extends Frame {
         b_back.setForeground(Color.blue);
         b_back.addActionListener(new Bt());
 
+        comboBox = new JComboBox();
+        comboBox.addItem("aa");
+        comboBox.addItem("bb");
+
         p0 = new Panel();
         p1 = new Panel();
         p2 = new Panel();
+        p3 = new Panel();
 
         str = new StringBuffer();
 
@@ -115,10 +122,14 @@ public class remote extends Frame {
         p2.add(b_dpad_right);
         p2.setBounds(250, 45, 60, 150);
 
+        p3.add(comboBox);
+        p3.setBounds(320,45,150,60);
+
         setLayout(null);
         add(p0);
         add(p1);
         add(p2);
+        add(p3);
         setResizable(false);
 
         addWindowListener(new WindowAdapter() {
@@ -127,7 +138,7 @@ public class remote extends Frame {
             }
         });
         setBackground(Color.lightGray);
-        setBounds(100, 350, 320, 250);
+        setBounds(100, 350, 520, 250);
         setVisible(true);
 
     }
